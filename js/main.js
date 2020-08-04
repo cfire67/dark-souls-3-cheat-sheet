@@ -444,7 +444,7 @@ var profilesKey = 'darksouls3_profiles';
                 if (checked === count) {
                     this.innerHTML = $('#' + type + '_nav_totals_' + i)[0].innerHTML = 'DONE';
                     $(this).removeClass('in_progress').addClass('done');
-                    $(this).parent('h3').addClass('completed');// Hide heading for completed category
+                    // $(this).parent('h3').addClass('completed');// Hide heading for completed category
                     $($('#' + type + '_nav_totals_' + i)[0]).removeClass('in_progress').addClass('done');
                 } else {
                     this.innerHTML = $('#' + type + '_nav_totals_' + i)[0].innerHTML =  checked + '/' + count;
