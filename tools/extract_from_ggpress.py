@@ -11,6 +11,7 @@ with open("fgo.html") as file:
     if '<strong>Event Drops</strong>' in str(d):
       continue
 
-    print("<li data-id=\"playthrough_0_%s\"><table>%s</table></li>" % (id , d))
+    # TODO for some reason, if there are newlines in between the "li -> /li" it doesn't render...?
+    print(("<li data-id=\"playthrough_0_%s\"><table>%s</table></li>" % (id , d)).replace("\n", ""))
     id += 1
     print("")
